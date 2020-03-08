@@ -1,0 +1,17 @@
+.bookmark {
+	margin-top: 0.8rem;
+	padding-top: 0.8rem;
+	border-top: 1px dashed $color__page--dark;
+
+	&__name {
+		font-size: 1rem;
+		line-height: 1.6rem;
+		font-weight: 300;
+	}
+
+	&__link {
+		color: $color__link;
+		font-size: 0.72rem;
+		line-height: 1rem;
+	}
+}

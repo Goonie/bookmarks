@@ -1,0 +1,28 @@
+html {
+	font-size: 18px;
+}
+
+body {
+	color: $color__text;
+	font-family: system-ui;
+	font-size: 1rem;
+	line-height: 1.6rem;
+	font-weight: 300;
+}
+
+h1 {
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+	font-weight: 500;
+	letter-spacing: 0.04rem;
+}
+
+a {
+	color: $color__link;
+	text-decoration: none;
+
+	&:focus,
+	&:hover {
+		text-decoration: underline;
+	}
+}
