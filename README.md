@@ -2,7 +2,7 @@
 
 This is a bookmark tool that also offers short-ish URLs. It's written in TypeScript, based on React+Redux and Firebase. A working version can be viewed here:
 
-<https://goonie-bookmarks.web.app>
+<https://link.goonie.nl>
 
 ## Configuration
 
