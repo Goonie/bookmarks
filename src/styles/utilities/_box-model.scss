@@ -1,0 +1,19 @@
+@mixin margin-x($length) {
+	margin-left: $length;
+	margin-right: $length;
+}
+
+@mixin margin-y($length) {
+	margin-top: $length;
+	margin-bottom: $length;
+}
+
+@mixin padding-x($length) {
+	padding-left: $length;
+	padding-right: $length;
+}
+
+@mixin padding-y($length) {
+	padding-top: $length;
+	padding-bottom: $length;
+}
