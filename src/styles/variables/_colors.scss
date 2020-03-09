@@ -1,8 +1,15 @@
-$color__browser: hsl(50, 8%, 96%);
+$color__browser: hsl(40, 8%, 92%);
+$color__browser--shadow: hsl(40, 8%, 80%);
 
-$color__page: hsl(50, 8%, 98%);
-$color__page--dark: hsl(50, 8%, 84%);
+$color__page: hsl(40, 40%, 96%);
+$color__page--shadow: hsl(40, 40%, 84%);
 
-$color__text: hsl(200, 16%, 20%);
+$color__text: hsl(40, 8%, 16%);
 
 $color__link: hsl(200, 80%, 48%);
+
+// background-color: rgb(37, 35, 31);
+// background-color: rgb(88, 83, 78);
+// background-color: rgb(139, 134, 124);
+// background-color: rgb(191, 188, 172);
+// background-color: rgb(242, 239, 225);

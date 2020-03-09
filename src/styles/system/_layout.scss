@@ -5,9 +5,9 @@ body {
 
 .layout {
 	margin: 0 auto;
-	padding: 1.6rem;
+	padding: 1.4rem;
 	max-width: 42rem;
 	background-color: $color__page;
-	box-shadow: 0 0.2rem 0.8rem $color__page--dark;
-	border-radius: 0.24rem;
+	box-shadow: 0 0.1rem 0.2rem $color__browser--shadow;
+	border-radius: 0.4rem;
 }

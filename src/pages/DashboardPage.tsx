@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 import { StoreState } from 'store/StoreTypes';
 
+import User from 'components/User';
 import Bookmark from 'components/Bookmark';
 
 const DashboardPage: React.FC = () => {
@@ -14,7 +15,10 @@ const DashboardPage: React.FC = () => {
 
 	return (
 		<main>
-			<h1>Goonie Bookmarks</h1>
+			<header className="header">
+				<h1 className="header__title">Bookmarks</h1>
+				<User/>
+			</header>
 
 			{!bookmarks.length && <p>Loading...</p>}
 

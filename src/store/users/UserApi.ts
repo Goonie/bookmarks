@@ -1,6 +1,6 @@
 import { firestore } from 'services/firebase';
 
-export const fetchBookmarks = async () => {
-	const query = await firestore.collection('bookmarks').get();
+export const fetchUsers = async () => {
+	const query = await firestore.collection('users').get();
 	return query.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 };

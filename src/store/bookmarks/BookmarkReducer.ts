@@ -1,7 +1,10 @@
 import { Reducer } from 'redux';
 
-import { BookmarkState, BookmarkAction } from './BookmarkTypes';
-import { UPDATE_ALL_BOOKMARKS } from './BookmarkTypes';
+import {
+	BookmarkState,
+	BookmarkAction,
+	UPDATE_ALL_BOOKMARKS
+} from './BookmarkTypes';
 
 export const initialBookmarkState = [];
 

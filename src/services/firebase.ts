@@ -1,5 +1,6 @@
 import * as firebase from 'firebase/app';
 
+import 'firebase/auth';
 import 'firebase/firestore';
 
 firebase.initializeApp({
@@ -13,4 +14,14 @@ firebase.initializeApp({
 	measurementId: process.env.REACT_APP__FIREBASE__MEASUREMENT_ID
 });
 
+export const auth = firebase.auth();
 export const firestore = firebase.firestore();
+
+export const signIn = () => {
+	const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+	firebase.auth().signInWithRedirect(googleAuthProvider);
+};
+
+export const signOut = () => {
+	firebase.auth().signOut();
+};
