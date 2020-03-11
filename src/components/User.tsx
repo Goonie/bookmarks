@@ -1,27 +1,21 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-
-import { StoreState } from 'store/StoreTypes';
 
 import { signIn, signOut } from 'services/firebase';
+import { useUserLoading, useUserSignedIn, useUserName } from 'services/user';
 
 const User: React.FC = () => {
-	const app = useSelector((state: StoreState) => state.app);
-	const users = useSelector((state: StoreState) => state.users);
-
-	const user = users.find(user => user.uid === app.user);
+	const userLoading = useUserLoading();
+	const userSignedIn = useUserSignedIn();
+	const userName = useUserName();
 
 	const signInAndDisable = (event: React.FormEvent<HTMLButtonElement>) => {
 		event.currentTarget.disabled = true;
 		signIn();
 	};
 
-	const signOutAndDisable = (event: React.FormEvent<HTMLButtonElement>) => {
-		event.currentTarget.disabled = true;
-		signOut();
-	};
+	if (userLoading) return null;
 
-	if (!app.user) {
+	if (!userSignedIn) {
 		return (
 			<section className="user">
 				<button className="user__button" onClick={signInAndDisable}>
@@ -33,9 +27,8 @@ const User: React.FC = () => {
 
 	return (
 		<section className="user">
-			{user && <span className="user__name">{user.name}</span>}
-
-			<button className="user__button" onClick={signOutAndDisable}>
+			<span className="user__name">{userName}</span>
+			<button className="user__button" onClick={signOut}>
 				Sign Out
 			</button>
 		</section>
