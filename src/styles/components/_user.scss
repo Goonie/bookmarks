@@ -1,5 +1,10 @@
 .user {
 	display: flex;
+	transition: opacity 0.6s linear;
+
+	&--loading {
+		opacity: 0;
+	}
 
 	&__name {
 		margin-right: 0.8rem;
