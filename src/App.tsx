@@ -4,11 +4,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { store } from 'services/store';
 
-import { signIn } from 'store/app/AppActions';
 import { fetchUsers } from 'store/users/UserActions';
 import { fetchBookmarks } from 'store/bookmarks/BookmarkActions';
-
-import { auth } from 'services/firebase';
 
 import DashboardPage from 'pages/DashboardPage';
 import RedirectPage from 'pages/RedirectPage';
@@ -17,10 +14,6 @@ import 'styles/app.scss';
 
 const App: React.FC = () => {
 	useEffect(() => {
-		auth.onAuthStateChanged(user => {
-			store.dispatch(signIn(user?.uid));
-		});
-
 		store.dispatch(fetchUsers());
 		store.dispatch(fetchBookmarks());
 	}, []);
